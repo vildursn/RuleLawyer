@@ -5,3 +5,4 @@ PyMuPDF
 tqdm
 nltk
 gradio
+numpy
