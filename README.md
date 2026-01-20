@@ -45,5 +45,5 @@ python src/embed.py
 
 ### Ask questions (WIP)
 ```bash
-python src/rag.py
+python src/gui.py
 ```

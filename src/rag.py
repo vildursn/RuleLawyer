@@ -9,16 +9,6 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 EMBEDDINGS_DIR = Path("data/embeddings")
 
-def load_embeddings():
-    # Load all embeddings and texts into memory
-    embeddings = []
-    texts = []
-    for file in EMBEDDINGS_DIR.glob("*.json"):
-        data = json.loads(file.read_text(encoding="utf-8"))
-        embeddings.append(np.array(data["embedding"]))
-        texts.append(data["text"])
-    return embeddings, texts
-
 def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 

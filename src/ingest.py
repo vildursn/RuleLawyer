@@ -41,8 +41,8 @@ def split_text_into_chunks(text: str, chunk_size: int = CHUNK_SIZE) -> List[str]
             current_chunk.append(sentence)
             current_length += len(words)
 
-        if current_chunk:
-            chunks.append(" ".join(current_chunk))
+    if current_chunk:
+        chunks.append(" ".join(current_chunk))
 
     return chunks
 
