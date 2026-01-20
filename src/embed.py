@@ -12,7 +12,7 @@ PROCESSED_DIR = Path("data/processed")
 EMBEDDINGS_DIR = Path("data/embeddings")
 EMBEDDINGS_DIR.mkdir(parents=True, exist_ok=True)
 
-def get_embedding(text, model="text-embedding-ada-002"):
+def get_embedding(text, model="text-embedding-3-small"):
     response = client.embeddings.create(input=[text], model=model)
     return response.data[0].embedding
 
